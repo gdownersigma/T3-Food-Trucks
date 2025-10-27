@@ -1,8 +1,7 @@
 ./pipeline/load.py
-************* Module load
-pipeline/load.py:1:0: W0612: Unused variable 'redshift_connector' (unused-variable)
-pipeline/load.py:1:0: W0611: Unused import redshift_connector (unused-import)
+************* Module .pylintrc
+.pylintrc:1:0: E0015: Unrecognized option found: suggestion-mode (unrecognized-option)
 
------------------------------------
-Your code has been rated at 6.00/10
+------------------------------------
+Your code has been rated at 10.00/10
 
