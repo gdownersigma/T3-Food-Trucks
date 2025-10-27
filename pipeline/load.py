@@ -1,6 +1,3 @@
-import redshift_connector
-
-
 def upload_transaction_data():
     """Uploads transaction data to the database."""
 
