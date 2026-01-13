@@ -2,6 +2,7 @@
 
 import awswrangler as wr
 import os
+from dotenv import load_dotenv
 
 
 def upload_to_s3(local_dir: str, bucket: str, prefix: str = "") -> None:
@@ -15,13 +16,21 @@ def upload_to_s3(local_dir: str, bucket: str, prefix: str = "") -> None:
 
                 s3_path = f"s3://{bucket}/{prefix}/{relative_path}" if prefix else f"s3://{bucket}/{relative_path}"
 
-                wr.s3.upload(local_path, s3_path)
+                wr.s3.upload(local_file=local_path, path=s3_path)
                 print(f"Uploaded {local_path} to {s3_path}")
 
 
 if __name__ == "__main__":
-    bucket_name = "c21-george-food-truck"
-    local_directory = "data"
-    s3_prefix = "transactions"
+    load_dotenv()
 
-    upload_to_s3(local_directory, bucket_name, s3_prefix)
+    bucket_name = "c21-george-food-truck"  # Change to your bucket
+
+    # Upload transaction parquet files (time-partitioned by truck)
+    upload_to_s3("data/input/transaction", bucket_name, "input/transaction")
+
+    # Upload dimension tables
+    upload_to_s3("data/input/truck", bucket_name, "input/truck")
+    upload_to_s3("data/input/payment_method",
+                 bucket_name, "input/payment_method")
+
+    print("All uploads complete!")
