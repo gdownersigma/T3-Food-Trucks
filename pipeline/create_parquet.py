@@ -16,14 +16,17 @@ def load_data(file_path: str) -> pd.DataFrame:
 
 
 def save_as_parquet(df: pd.DataFrame) -> None:
-    """Create time-partitioned parquet files."""
+    """Create time-partitioned parquet files for each truck."""
 
-    for (year, month, day), group in df.groupby(['year', 'month', 'day']):
-        folder_path = f"data/year={year}/month={month:02d}/day={day:02d}"
+    for (truck, year, month, day), group in df.groupby(['truck_name', 'year', 'month', 'day']):
+        # Sanitise truck name for folder (replace spaces, special chars)
+        truck_folder = truck.replace(' ', '_').replace("'", "")
+
+        folder_path = f"data/input/transaction/{truck_folder}/year={year}/month={month:02d}/day={day:02d}"
         os.makedirs(folder_path, exist_ok=True)
 
         group = group.drop(columns=['year', 'month', 'day'])
-        file_path = os.path.join(folder_path, "transactions.parquet")
+        file_path = os.path.join(folder_path, "transaction.parquet")
         group.to_parquet(file_path, index=False)
         print(f"Saved {file_path} with {len(group)} records.")
 
