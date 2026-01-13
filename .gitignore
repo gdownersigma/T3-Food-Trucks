@@ -95,3 +95,10 @@ venv/
 
 *.pem
 *.pemkey
+
+
+.terraform
+*.terraform.*
+*.tfstate
+*.tfstate.*
+*.tfvars
