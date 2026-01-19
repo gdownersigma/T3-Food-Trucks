@@ -1,0 +1,6 @@
+pandas
+pymysql
+python-dotenv
+awswrangler
+pyarrow
+cryptography
