@@ -102,12 +102,12 @@ resource "aws_iam_role_policy" "scheduler_policy" {
       {
         Effect = "Allow"
         Action = "ecs:RunTask"
-        Resource = aws_ecs_task_definition.pipeline_task.arn
+        Resource = "arn:aws:ecs:${var.AWS_REGION}:${var.AWS_ACCOUNT_ID}:task-definition/c21-george-pipeline-task:*"
       },
       {
         Effect = "Allow"
         Action = "iam:PassRole"
-        Resource = aws_iam_role.ecs_execution_role.arn
+        Resource = "*"
       }
     ]
   })
