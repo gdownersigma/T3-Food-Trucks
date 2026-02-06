@@ -139,3 +139,8 @@ resource "aws_scheduler_schedule" "pipeline_schedule" {
     }
   }
 }
+
+
+resource "aws_s3_bucket" "data_lake" {
+  bucket = "c21-george-food-truck"  
+}
