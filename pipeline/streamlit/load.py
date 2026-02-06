@@ -1,12 +1,12 @@
-import pandas as pd
-from dotenv import load_dotenv
-import os
+"""Data loading module for Streamlit dashboard."""
 import awswrangler as wr
+import pandas as pd
 import streamlit as st
+from dotenv import load_dotenv
 
 
 @st.cache_data
-def load_data():
+def load_data() -> pd.DataFrame:
     """Load transaction data from Athena."""
     load_dotenv()
     df = wr.athena.read_sql_query(
