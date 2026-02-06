@@ -1,0 +1,132 @@
+{
+ "files": [
+  {
+   "file_name": "./report/report.py",
+   "errors": [
+    "report/report.py:89:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)",
+    "report/report.py:94:24: W0613: Unused argument 'context' (unused-argument)",
+    "report/report.py:87:0: W0612: Unused variable 'save_report' (unused-variable)"
+   ],
+   "score": 92.3
+  },
+  {
+   "file_name": "./pipeline/updated/extract.py",
+   "errors": [],
+   "score": 100.0
+  },
+  {
+   "file_name": "./pipeline/updated/create_parquet.py",
+   "errors": [
+    "pipeline/updated/create_parquet.py:4:0: W0612: Unused variable 'datetime' (unused-variable)",
+    "pipeline/updated/create_parquet.py:4:0: W0611: Unused datetime imported from datetime (unused-import)"
+   ],
+   "score": 92.6
+  },
+  {
+   "file_name": "./pipeline/updated/transform.py",
+   "errors": [],
+   "score": 100.0
+  },
+  {
+   "file_name": "./pipeline/updated/upload_to_s3.py",
+   "errors": [
+    "pipeline/updated/upload_to_s3.py:8:0: C0103: Function name \"upload_to_s3\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "pipeline/updated/upload_to_s3.py:17:16: C0103: Variable name \"s3_path\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "pipeline/updated/upload_to_s3.py:10:14: W0612: Unused variable 'dirs' (unused-variable)"
+   ],
+   "score": 84.2
+  },
+  {
+   "file_name": "./pipeline/updated/pipeline.py",
+   "errors": [],
+   "score": 100.0
+  },
+  {
+   "file_name": "./pipeline/streamlit/chart.py",
+   "errors": [
+    "pipeline/streamlit/chart.py:7:0: W0612: Unused variable 'revenue_by_truck_chart' (unused-variable)",
+    "pipeline/streamlit/chart.py:19:0: W0612: Unused variable 'daily_revenue_trend_chart' (unused-variable)",
+    "pipeline/streamlit/chart.py:32:0: W0612: Unused variable 'payment_method_pie_chart' (unused-variable)",
+    "pipeline/streamlit/chart.py:45:0: W0612: Unused variable 'revenue_by_hour_chart' (unused-variable)"
+   ],
+   "score": 83.3
+  },
+  {
+   "file_name": "./pipeline/streamlit/pages/Culinary.py",
+   "errors": [
+    "pipeline/streamlit/pages/Culinary.py:46:4: C0103: Variable name \"col1\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "pipeline/streamlit/pages/Culinary.py:46:10: C0103: Variable name \"col2\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "pipeline/streamlit/pages/Culinary.py:46:16: C0103: Variable name \"col3\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "pipeline/streamlit/pages/Culinary.py:46:22: C0103: Variable name \"col4\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "pipeline/streamlit/pages/Culinary.py:68:4: C0103: Variable name \"col1\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "pipeline/streamlit/pages/Culinary.py:68:10: C0103: Variable name \"col2\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "pipeline/streamlit/pages/Culinary.py:81:4: C0103: Variable name \"col1\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "pipeline/streamlit/pages/Culinary.py:81:10: C0103: Variable name \"col2\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)"
+   ],
+   "score": 85.7
+  },
+  {
+   "file_name": "./pipeline/streamlit/load.py",
+   "errors": [],
+   "score": 100.0
+  },
+  {
+   "file_name": "./pipeline/streamlit/culinary_charts.py",
+   "errors": [
+    "pipeline/streamlit/culinary_charts.py:6:0: W0612: Unused variable 'fsa_rating_by_truck_chart' (unused-variable)",
+    "pipeline/streamlit/culinary_charts.py:20:0: W0612: Unused variable 'revenue_by_fsa_rating_chart' (unused-variable)",
+    "pipeline/streamlit/culinary_charts.py:33:0: W0612: Unused variable 'transactions_by_fsa_rating_chart' (unused-variable)",
+    "pipeline/streamlit/culinary_charts.py:46:0: W0612: Unused variable 'card_reader_pie_chart' (unused-variable)"
+   ],
+   "score": 82.6
+  },
+  {
+   "file_name": "./pipeline/streamlit/Revenue.py",
+   "errors": [
+    "pipeline/streamlit/Revenue.py:45:4: C0103: Variable name \"col1\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "pipeline/streamlit/Revenue.py:45:10: C0103: Variable name \"col2\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "pipeline/streamlit/Revenue.py:45:16: C0103: Variable name \"col3\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "pipeline/streamlit/Revenue.py:45:22: C0103: Variable name \"col4\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "pipeline/streamlit/Revenue.py:66:4: C0103: Variable name \"col1\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "pipeline/streamlit/Revenue.py:66:10: C0103: Variable name \"col2\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)"
+   ],
+   "score": 88.2
+  },
+  {
+   "file_name": "./pipeline/historical/extract.py",
+   "errors": [],
+   "score": 100.0
+  },
+  {
+   "file_name": "./pipeline/historical/create_parquet.py",
+   "errors": [
+    " (previous run: 10.00/10, +0.00)"
+   ],
+   "score": 100.0
+  },
+  {
+   "file_name": "./pipeline/historical/transform.py",
+   "errors": [
+    " (previous run: 9.26/10, +0.74)"
+   ],
+   "score": 100.0
+  },
+  {
+   "file_name": "./pipeline/historical/upload_to_s3.py",
+   "errors": [
+    " (previous run: 10.00/10, +0.00)",
+    "pipeline/historical/upload_to_s3.py:8:0: C0103: Function name \"upload_to_s3\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "pipeline/historical/upload_to_s3.py:16:16: C0103: Variable name \"s3_path\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)"
+   ],
+   "score": 89.5
+  },
+  {
+   "file_name": "./pipeline/historical/pipeline.py",
+   "errors": [
+    " (previous run: 8.42/10, +0.53)"
+   ],
+   "score": 100.0
+  }
+ ],
+ "average_score": 93.7
+}
